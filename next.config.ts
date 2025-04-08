@@ -1,7 +1,33 @@
 import type { NextConfig } from "next";
 
-const nextConfig: NextConfig = {
-  /* config options here */
+import createMDX from "@next/mdx";
+import { execSync } from "child_process";
+
+const getLastCommitTime = () => {
+  try {
+    return execSync("git log -1 --format=%cd --date=iso").toString().trim();
+  } catch (error) {
+    console.error("Error getting last commit time:", error);
+    return "";
+  }
 };
 
-export default nextConfig;
+const nextConfig: NextConfig = {
+  // Configure `pageExtensions` to include markdown and MDX files
+  pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
+  // Optionally, add any other Next.js config below
+
+  images: {
+    remotePatterns: [{ hostname: "*" }],
+  },
+  env: {
+    NEXT_PUBLIC_LAST_UPDATED: getLastCommitTime(),
+  },
+};
+
+const withMDX = createMDX({
+  // Add markdown plugins here, as desired
+});
+
+// Merge MDX config with Next.js config
+export default withMDX(nextConfig);
