@@ -1,4 +1,4 @@
-import SkillMdx from "@/content/skill.mdx";
+import SkillMdx, { metadata } from "@/content/skill.mdx";
 
 import {
   ComponentWrapper,
@@ -6,6 +6,8 @@ import {
 } from "@/components/ui/component-wrapper";
 
 export default function Skill() {
+  if (metadata.hidden) return;
+
   return (
     <ComponentWrapper
       // className="break-before-page break-inside-avoid"
@@ -18,7 +20,7 @@ export default function Skill() {
       // }
       // badgeRight
     >
-      <TypographyWrapper>
+      <TypographyWrapper className="w-full">
         <SkillMdx />
       </TypographyWrapper>
     </ComponentWrapper>

@@ -10,8 +10,8 @@ export default function Profile() {
 
   return (
     <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-center md:px-8">
-      <figure className={"w-full shrink-0 space-y-1 sm:w-64 print:w-48"}>
-        <div className="overflow-hidden rounded-md">
+      <figure className={"shrink-0 space-y-1"}>
+        <div className="mx-auto w-48 overflow-hidden rounded-lg">
           <Image
             src={image}
             className={
