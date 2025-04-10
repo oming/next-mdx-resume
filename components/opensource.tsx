@@ -21,6 +21,10 @@ export default async function OpenSource() {
     ),
   );
 
+  if (sortedData.filter(({ metadata }) => !metadata.hidden).length === 0) {
+    return;
+  }
+
   return (
     <ComponentWrapper
       // className="break-before-page break-inside-avoid"

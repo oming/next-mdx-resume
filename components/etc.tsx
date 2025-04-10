@@ -1,4 +1,4 @@
-import EtcMdx from "@/content/etc.mdx";
+import EtcMdx, { metadata } from "@/content/etc.mdx";
 
 import {
   ComponentWrapper,
@@ -6,6 +6,8 @@ import {
 } from "@/components/ui/component-wrapper";
 
 export default function Etc() {
+  if (metadata.hidden) return;
+
   return (
     <ComponentWrapper
       // className="break-before-page break-inside-avoid"
