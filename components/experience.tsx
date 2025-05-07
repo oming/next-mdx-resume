@@ -23,7 +23,7 @@ export default async function Experience() {
 
   return (
     <ComponentWrapper
-      // className="break-before-page"
+      className="break-before-page"
       name={"EXPERIENCE"}
       badge={<Badge>{duration}</Badge>}
     >

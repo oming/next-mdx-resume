@@ -22,7 +22,7 @@ export default async function Project() {
 
   return (
     <ComponentWrapper
-      // className="break-before-page"
+      className="break-before-page"
       name={"PROJECT"}
       badge={
         <p className="text-muted-foreground text-xs print:hidden">
