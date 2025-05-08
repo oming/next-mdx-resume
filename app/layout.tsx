@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 
-import { GoogleAnalytics } from "@next/third-parties/google";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 import Footer from "@/components/footer";
 import Header from "@/components/header";
@@ -38,8 +38,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    // <html lang="ko" suppressHydrationWarning className="dark">
     <html lang="ko" suppressHydrationWarning className="">
+      {process.env.NODE_ENV === "production" &&
+        process.env.NEXT_PUBLIC_GTM_ID && (
+          <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID as string} />
+        )}
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
@@ -47,10 +50,6 @@ export default function RootLayout({
         {children}
         <Footer />
       </body>
-      {process.env.NODE_ENV === "production" &&
-        process.env.NEXT_PUBLIC_GA_ID && (
-          <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID as string} />
-        )}
     </html>
   );
 }
