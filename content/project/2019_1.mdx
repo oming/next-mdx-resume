@@ -1,0 +1,20 @@
+export const metadata = {
+  hidden: false, // 컨텐츠 숨김여부
+  startDate: '2019.02',
+  endDate: '2019.09',
+  company: '위썸(WESOME)',
+  project: 'PDF-ion, PDF 문서 분석을 위한 문서의 형태를 유지한 텍스트 추출 프로그램 개발',
+  type: 'DEV',
+  position: '솔루션 / 백엔드 개발자',
+  skill: ['Java', 'Tesseract OCR']
+} 
+
+머신러닝 및 빅데이터 솔루션의 디지털 인텔리전스 활용을 위한 PDF 문서 파싱 라이브러리 개발
+- 단순 텍스트 추출에서 확장하여 제목, 문단, 단락, 강조, 이미지, 메타데이터 등 다양한 데이터 추출 기능 구현
+- 추후 MS Office (ECMA-376), PDF (ISO 32000-1:2008), HWP/OWPML 등 다양한 문서 포맷 지원 기능 추가 개발
+- Tesseract OCR 엔진을 통합하여 PDF 내 이미지 텍스트 추출 기능 개발
+- 추출된 문서 내용을 구조화된 JSON 형태로 변환하여 데이터 활용성 증대
+  - 데이터베이스(MongoDB, PostgreSQL) 또는 파일 시스템에 추출 데이터 저장 기능 구현
+  - PDF 문서 내 첨부파일 추출 및 인덱스별 저장 기능 개발
+- 개발된 PDF 파싱 라이브러리를 내부 빅데이터 솔루션의 핵심 데이터 추출 엔진으로 성공적으로 적용
+- [demo](http://demo.wesome.co.kr/admin/document-analysis)

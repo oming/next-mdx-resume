@@ -1,0 +1,20 @@
+export const metadata = {
+  hidden: false, // 컨텐츠 숨김여부
+  // startDate: '2020.08',
+  startDate: '2020.07',
+  // endDate: '2021.01',
+  endDate: '2020.12',
+  company: '대우건설',
+  project: '[PoC] PDF문서의 텍스트 분석 전처리를 위한 툴 개발',
+  type: 'DEV',
+  position: 'SI / 프로젝트 리더 & 메인 개발자',
+  skill: ['Java', 'PDFBox', 'GIS', 'JTS' ]
+} 
+
+[PoC] 입찰 문서 분석 위한 PDF 텍스트 추출 라이브러리 개발 및 PoC 프로젝트 리딩
+- PDF 문서 내 텍스트를 Page, Paragraph, Sentence, Line, Word 단위로 정확하게 추출하는 라이브러리 개발하여 기존 PDF 문서 추출 솔루션의 한계 극복
+- PDFBox + JTS 활용, 텍스트 블록 간 공간적 관계를 분석 변환 및 GIS 기반 문단/단락 재구성 알고리즘 개발
+- 줄 간격, 블록 거리, 정렬 방식 분석 통한 정확한 문단 복원 및 다국어(RTL 포함) 지원
+- 하이픈 연결 문제 해결 및 파라미터 기반 옵션 처리, 로깅, 데이터 저장 기능 구현
+- 디버그 툴 개발(이미지 출력) 및 머리글, 바닥글, 워터마크 등 불필요 요소 제거 기능 구현
+- PoC 성공적인 수행후 개발된 툴을 기반으로 후속 프로젝트 진행

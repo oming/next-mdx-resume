@@ -1,0 +1,26 @@
+export const metadata = {
+  hidden: false, // 컨텐츠 숨김여부
+  startDate: '2022.04',
+  endDate: '2022.11',
+  company: 'KDB 산업은행',
+  project: '기업여신 마케팅 앱 개발',
+  type: 'DEV',
+  position: 'SI / 프론트엔드 개발자',
+  skill: ['Electron', 'React', 'Redux', 'Typescript', 'axios' ]
+} 
+
+내부망 기반 행내 서비스를 외부 환경(내부망 + VDI + Surface)에서 활용하여 기업 고객 대상 여신 마케팅 활동을 지원하는 앱 개발에 참여.  
+기존 내부 서비스의 핵심 기능을 추출 및 개선하여 태블릿 환경에 최적화.
+
+- 폐쇄망 개발 환경 구축 및 개발 도구/라이브러리 준비
+- Electron + React(Typescript) 기반 앱 개발 (크로스 플랫폼 지원), 터치 기반 UI 최적화, MCI(Multi Channel Integration) 기반 통신 연계 및 최적화, 컴포넌트, hook기반 데이터 관리
+- 핵심 기능 개발:
+  - 업체 개요 (재무정보·업체 요약·상세 정보 출력)
+    - 기존 여러 화면으로 분산된 기능을 하나의 화면으로 통합
+    - 수백 개의 MCI 분석 후 필요한 정보만 선별, 불필요한 MCI 제거 (hook기반 처리)
+    - MCI 제거 및 UX 개선으로 반응 시간 50% 이상 단축
+  - 금리 시산 (금리 계산 시뮬레이션 기능)
+    - 기존 금리 시산 로직 분석 및 금리시산 로직 설계
+    - 정확한 입력·출력 검증으로 신뢰성 확보(react-hook-form)
+  - 금리 제안서 (금리 제안서 생성 및 PDF 출력 기능 구현)
+- 산업은행의 엄격한 산출물 작성 기준 준수
