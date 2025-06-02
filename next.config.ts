@@ -3,14 +3,14 @@ import type { NextConfig } from "next";
 import createMDX from "@next/mdx";
 import { execSync } from "child_process";
 
-const getLastCommitTime = () => {
-  try {
-    return execSync("git log -1 --format=%cd --date=iso").toString().trim();
-  } catch (error) {
-    console.error("Error getting last commit time:", error);
-    return "";
-  }
-};
+// const getLastCommitTime = () => {
+//   try {
+//     return execSync("git log -1 --format=%cd --date=iso").toString().trim();
+//   } catch (error) {
+//     console.error("Error getting last commit time:", error);
+//     return "";
+//   }
+// };
 
 const nextConfig: NextConfig = {
   // Configure `pageExtensions` to include markdown and MDX files
@@ -20,9 +20,9 @@ const nextConfig: NextConfig = {
   images: {
     remotePatterns: [{ hostname: "*" }],
   },
-  env: {
-    NEXT_PUBLIC_LAST_UPDATED: getLastCommitTime(),
-  },
+  // env: {
+  //   NEXT_PUBLIC_LAST_UPDATED: getLastCommitTime(),
+  // },
 };
 
 const withMDX = createMDX({
